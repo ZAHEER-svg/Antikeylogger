@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #2b2b2b;" stylesheets="/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Anti_Controller">
+    <children>
+      <Label fx:id="scanMessageLabel1" layoutX="310.0" layoutY="678.0" style="-fx-font-size: 28px; -fx-text-fill: #00ffcc; -fx-padding: 20;" text="Anti Keylogger - Behavioral Analysis" />
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #333333; -fx-padding: 15; -fx-background-radius: 10;">
+         <children>
+            <Label style="-fx-font-size: 20; -fx-text-fill: #00ffcc;" text="Recent Keystrokes" />
+      
+              <TextArea fx:id="recentKeystrokesArea" editable="false" prefHeight="100" prefWidth="600" style="-fx-font-size: 16px;" wrapText="true" />
+         </children>
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" style="-fx-background-color: #333333; -fx-padding: 15; -fx-background-radius: 10;">
+         <children>
+      
+              <Label style="-fx-font-size: 20px; -fx-text-fill: #00ffcc;" text="Behavioral Analysis of Key Logs" />
+              <ListView fx:id="behavioralAnalysisListView" prefHeight="300.0" prefWidth="600" style="-fx-background-color: #1e1e1e; -fx-text-fill: white;" />
+              <ProgressIndicator fx:id="progressIndicator" style="-fx-progress-color: #00ffcc;" visible="false" />
+              <Label fx:id="scanMessageLabel" style="-fx-font-size: 16px; -fx-text-fill: gray;" text="" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+         <children>
+              <Button fx:id="inspectButton" onAction="#handleInspectBehavioralPattern" style="-fx-font-size: 18px; -fx-background-color: #ff6600; -fx-text-fill: white; -fx-padding: 10 20;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@IMG/eye-test.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+              <Button fx:id="stopThreatButton" onAction="#loadAndDisplayKeystrokes1" style="-fx-font-size: 18px; -fx-background-color: red; -fx-text-fill: white; -fx-padding: 10 20;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@IMG/loading.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+              <!-- New Button for Contextual Analysis -->
+              <Button fx:id="contextualAnalysisButton" onAction="#handleContextualAnalysis" style="-fx-font-size: 18px; -fx-background-color: green; -fx-text-fill: white; -fx-padding: 10 20;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@IMG/analytics.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+              <Button fx:id="backButton" onAction="#handleStartApplication" style="-fx-font-size: 18px; -fx-background-color: #007bff; -fx-text-fill: white; -fx-padding: 10 20;">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@IMG/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</VBox>

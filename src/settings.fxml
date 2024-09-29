@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
+
+<?import java.lang.String?>
+<VBox alignment="CENTER" spacing="20" styleClass="settings-background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Anti_Controller" stylesheets="/styles.css">
+    <children>
+        <Label text="Settings" styleClass="settings-title" />
+
+        <!-- Section 1: Signature Settings -->
+        <VBox spacing="10" alignment="CENTER_LEFT" prefWidth="600" styleClass="settings-section">
+            <Label text="Signature Settings" styleClass="settings-section-title" />
+            <CheckBox text="Enable Automatic Updates" fx:id="autoUpdateCheckbox" styleClass="settings-checkbox"/>
+            <CheckBox text="Notify on New Signature Detection" fx:id="notifyCheckbox" styleClass="settings-checkbox"/>
+        </VBox>
+
+        <Separator prefWidth="600" styleClass="settings-separator"/>
+
+        <!-- Section 2: Behavioral Analysis Settings -->
+        <VBox spacing="10" alignment="CENTER_LEFT" prefWidth="600" styleClass="settings-section">
+            <Label text="Behavioral Analysis Settings" styleClass="settings-section-title" />
+            <HBox spacing="10">
+                <Label text="Analysis Sensitivity:" styleClass="settings-label" />
+                <ComboBox fx:id="sensitivityComboBox" prefWidth="200" styleClass="settings-combobox">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Low"/>
+                            <String fx:value="Medium"/>
+                            <String fx:value="High"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Log Retention Days:" styleClass="settings-label" />
+                <TextField fx:id="logRetentionTextField" prefWidth="200" promptText="Enter number of days" styleClass="settings-textfield"/>
+            </HBox>
+        </VBox>
+
+        <Separator prefWidth="600" styleClass="settings-separator"/>
+
+        <!-- Back Button -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Back to Main Menu" onAction="#handleStartApplication" styleClass="back-button" fx:id="backButton"/>
+        </HBox>
+    </children>
+</VBox>

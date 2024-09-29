@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="/styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Anti_Controller">
+
+   <!-- Background Image -->
+   <ImageView fx:id="backgroundImage" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" smooth="true">
+      <image>
+         <Image url="@IMG/AntiKeyImage.jpg" />
+      </image>
+   </ImageView>
+
+   <!-- UI Components -->
+   <VBox alignment="TOP_CENTER" spacing="25.0" styleClass="side-pane" VBox.vgrow="ALWAYS">
+      <children>
+         <JFXButton fx:id="signatureDetectionButton" onAction="#handleGoToSignatureDetection" styleClass="nav-button" text="Signature Detection" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </JFXButton>
+
+         <JFXButton fx:id="heuristicDetectionButton" onAction="#handleGoToHeuristicDetection" styleClass="nav-button" text="Heuristic Detection" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </JFXButton>
+
+         <JFXButton fx:id="behavioralAnalysisButton" onAction="#handleGoToBehavioralAnalysis" styleClass="nav-button" text="Behavioral Analysis" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </JFXButton>
+
+         <JFXButton fx:id="settingsButton" onAction="#handleGoToSettings" styleClass="nav-button" text="Settings" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </JFXButton>
+
+         <JFXButton fx:id="exitButton" onAction="#handleExitApplication" styleClass="nav-button" text="Exit" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets top="30.0" />
+            </VBox.margin>
+         </JFXButton>
+      </children>
+
+      <padding>
+         <Insets top="70.0" />
+      </padding>
+   </VBox>
+</StackPane>

@@ -1,0 +1,178 @@
+/* Main background for the application */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* Gradient background */
+}
+
+/* Side panel styling */
+.side-pane {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+/* Unified Style for Navigation Buttons */
+.nav-button {
+    -fx-background-color: #34495e; /* Unified color for background */
+    -fx-text-fill: #ffffff; /* White text color */
+    -fx-font-size: 2em; /* Relative font size that scales with button size */
+    -fx-padding: 2% 4%; /* Percentage-based padding that scales with the button */
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 5, 0, 0, 4);
+    -fx-font-weight: bold;
+}
+
+.nav-button:hover {
+    -fx-background-color: #3498db; /* Hover effect */
+}
+
+.nav-button:pressed {
+    -fx-background-color: #2980b9; /* Pressed effect with a darker color */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.25), 7, 0, 0, 6);
+}
+
+/* Content Pane Styling */
+.stack-pane-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-border-color: #ecf0f1;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 0);
+}
+
+.stack-pane-overlay {
+    -fx-background-color: rgba(0, 0, 0, 0.03);
+}
+
+.stack-pane-shadow {
+    -fx-effect: dropshadow(gaussian, rgba(50, 50, 50, 0.1), 10, 0.5, 0, 0);
+}
+
+.stack-pane-border {
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+/* Specific button styles using ID selectors */
+#inspectButton {
+    -fx-background-color: #f39c12;
+}
+
+#stopThreatButton {
+    -fx-background-color: #e74c3c;
+}
+
+#backButton {
+    -fx-background-color: #007bff;
+}
+/* Example CSS for Heuristic Detection */
+#progressIndicator {
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-progress-color: #007bff;
+}
+
+#heuristicListView {
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1px;
+}
+
+#startDetectionButton {
+    -fx-background-color: #28a745;
+    -fx-hover-background-color: #218838;
+    -fx-pressed-background-color: #1e7e34;
+}
+
+#backButton {
+    -fx-background-color: #007bff;
+    -fx-hover-background-color: #0056b3;
+    -fx-pressed-background-color: #004080;
+}
+.settings-background {
+    -fx-background-color: linear-gradient(to bottom, #e2e2e2, #ffffff);
+}
+
+.settings-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: black;
+}
+
+.settings-section-title {
+    -fx-font-size: 20px;
+    -fx-text-fill: black;
+}
+
+.settings-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+}
+
+.apply-button {
+    -fx-font-size: 18px;
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+}
+
+.cancel-button {
+    -fx-font-size: 18px;
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+}
+
+.back-button {
+    -fx-font-size: 18px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+}
+/* styles.css */
+.main-button {
+    -fx-font-size: 18px;
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.main-button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.secondary-button {
+    -fx-font-size: 18px;
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #218838;
+}
+
+/* Optional: Add a subtle shadow effect to the image */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+}
+.main-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #2980b9;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0.5, 0, 1);
+}
